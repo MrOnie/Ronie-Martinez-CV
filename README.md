@@ -41,6 +41,8 @@ The project was developed using the following technologies:
     *   Collapsible sections for a more organized content presentation.
     *   Scroll animations to make the website more dynamic.
     *   Image hover effects in the projects section.
+    *   **Interactive Skill Icons:** Subtle animated icons appear on hover for skills (e.g., spinning gear for backend, pulsing for frontend).
+    *   **Navigation Underline Effect:** Menu options display a dynamic underline on hover.
 *   **SVG Icons:** The website uses SVG icons for a clean and modern look.
 
 ## Development Process
