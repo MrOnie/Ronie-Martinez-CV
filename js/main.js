@@ -235,32 +235,3 @@ const generatePdf = () => {
 };
 
 document.getElementById('download-cv-btn').addEventListener('click', generatePdf);
-
-// Skills hover effect
-const skills = document.querySelectorAll('.skill-item');
-const chars = '!<>-_\\/[]{}—=+*^?#________';
-
-const scramble = (element) => {
-    const originalText = element.dataset.text;
-    let i = 0;
-    const interval = setInterval(() => {
-        element.textContent = originalText.split('').map((char, index) => {
-            if (index < i) {
-                return originalText[index];
-            }
-            return chars[Math.floor(Math.random() * chars.length)];
-        }).join('');
-        if (i >= originalText.length) {
-            clearInterval(interval);
-            element.textContent = originalText;
-        }
-        i += 1 / 3;
-    }, 30);
-};
-
-skills.forEach(skill => {
-    skill.dataset.text = skill.textContent;
-    skill.addEventListener('mouseover', () => {
-        scramble(skill);
-    });
-});

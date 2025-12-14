@@ -238,13 +238,54 @@ section h2 svg {
     font-size: 1.1rem;
     transition: all 0.3s ease;
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    position: relative;
 }
 
-.skill-item:hover {
-    background: #1a253f;
-    color: #fff;
-    transform: scale(1.1);
-    box-shadow: 0 0 20px #6c8ee0;
+.skill-item span {
+    margin-right: 10px;
+}
+
+.skill-item i {
+    font-size: 1.2rem;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.skill-item:hover i {
+    opacity: 1;
+}
+
+/* Animations */
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Apply animations on hover */
+.skill-item[data-skill-type="backend"]:hover i {
+    animation: spin 2s linear infinite;
+}
+
+.skill-item[data-skill-type="frontend"]:hover i {
+    animation: pulse 1s ease-in-out infinite;
 }
 
 /* Education Section */
