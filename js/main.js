@@ -204,9 +204,11 @@ const generatePdf = () => {
                 ${courses.map(course => `
                     <div style="margin-bottom: 15px; page-break-inside: avoid;">
                         <h3 style="font-size: 14px; margin-bottom: 5px;">${course.title}</h3>
-                        <ul style="list-style-type: disc; margin-left: 20px;">
-                            ${course.details.map(detail => `<li>${detail}</li>`).join('')}
-                        </ul>
+                        ${course.details.length > 0 ? `
+                            <ul style="list-style-type: disc; margin-left: 20px;">
+                                ${course.details.map(detail => `<li>${detail}</li>`).join('')}
+                            </ul>
+                        ` : ''}
                     </div>
                 `).join('')}
             </div>
