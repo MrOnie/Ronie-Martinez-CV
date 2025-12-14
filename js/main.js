@@ -44,3 +44,17 @@ const revealOnScroll = () => {
 
 window.addEventListener('scroll', revealOnScroll);
 revealOnScroll();
+
+const generatePdf = () => {
+    const element = document.getElementById('main-content');
+    const opt = {
+        margin:       1,
+        filename:     'Ronie_Martinez_CV.pdf',
+        image:        { type: 'jpeg', quality: 0.98 },
+        html2canvas:  { scale: 2 },
+        jsPDF:        { unit: 'in', format: 'letter', orientation: 'portrait' }
+    };
+    html2pdf().from(element).set(opt).save();
+};
+
+document.getElementById('download-cv-btn').addEventListener('click', generatePdf);

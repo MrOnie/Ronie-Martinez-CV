@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ronie Martínez - Portfolio</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
     <link rel="stylesheet" href="css/master.css">
 </head>
 <body>
@@ -49,16 +50,519 @@
                 <li><a href="#education">Education</a></li>
                 <li><a href="#publications">Publications</a></li>
                 <li><a href="#courses">Courses</a></li>
-            </ul>
-        </div>
     </nav>
+    <div id="main-content">
+        <div class="container">
+            <div class="row">
+                <div class="column left">
+
 
     <section id="about">
         <div class="container reveal">
             <h2><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z" fill="#333"/></svg> About Me</h2>
             <p>I am a dedicated and versatile professional with a robust background in Artificial Intelligence, Machine Learning, and Data Science, complemented by a solid foundation in software development. My academic journey, crowned with a Master's degree in Artificial Intelligence and a Bachelor's in Electronics and Telecommunications, has provided me with a deep understanding of both theoretical frameworks and their practical applications. I thrive on tackling complex challenges and have a proven track record of developing innovative solutions, ranging from sophisticated deep learning models for medical diagnostics to dynamic and interactive web applications.</p>
             <p>My professional experience is diverse, spanning freelance consulting, research advising, and engineering roles. I have a passion for education and have been actively involved in teaching and mentoring, sharing my knowledge in areas like programming, data science, and AI. As a lifelong learner, I am constantly exploring new technologies and methodologies to stay at the cutting edge of the industry. I am proficient in a variety of programming languages and tools, including Python, JavaScript, Java, C++, MATLAB, and the full web stack. My goal is to leverage my skills and experience to contribute to meaningful projects that push the boundaries of technology and create a positive impact.</p>
-            <a href="CV_RMartinez_Academia_ENG.pdf" class="btn" download>Download CV</a>
+            <button id="download-cv-btn" class="btn">Download CV</button>
+        </div>
+    </section>
+
+    <section id="experience">
+        <div class="container reveal">
+            <h2><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20 6h-4V4c0-1.11-.89-2-2-2h-4c-1.11 0-2 .89-2 2v2H4c-1.11 0-1.99.89-1.99 2L2 19c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V8c0-1.11-.89-2-2-2zm-6 0h-4V4h4v2z" fill="#333"/></svg> Professional Experience</h2>
+            <div class="experience-grid">
+                <div class="experience-item collapsible">
+                    <h3 class="collapsible-trigger">Freelancing @ Research UIO</h3>
+                    <p class="date">Jan 2013 - Current</p>
+                    <div class="collapsible-content">
+                        <ul>
+                            <li>Tutoring, private classes, consulting, project development, and research advising in artificial intelligence, machine learning, data science, digital communications, algebra, and basic robotics.</li>
+                            <li>License plate detection and recognition systems using WPOD-NET, the MobileNetV2 model, and image processing.</li>
+                            <li>Removal of the pectoral muscle and segmentation for an aided breast cancer diagnosis system using image processing.</li>
+                            <li>Valvulopathies detection system from ECG using 1-D CNNs.</li>
+                            <li>Machine Learning-Based Classification for Cocoa Beans through images.</li>
+                            <li>Predictive Modeling and Machine Learning for Private Logistics.</li>
+                            <li>Data visualization for Covid-related information.</li>
+                            <li>Machine Learning-Based Prediction for Electric Transformer's Load Capacity.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="experience-item collapsible">
+                    <h3 class="collapsible-trigger">Administrative and Projects Assistant</h3>
+                    <p><em>Dismafer</em></p>
+                    <p class="date">Oct 2015 - Nov 2021</p>
+                    <div class="collapsible-content">
+                        <ul>
+                            <li>Accounting, administrative and manager assistant.</li>
+                            <li>Project consulting for space automation within smart homes.</li>
+                            <li>Training for the suitable use of smart home device for smooth automation.</li>
+                        </ul>
+                    </div>
+                </div>
+                 <div class="experience-item collapsible">
+                    <h3 class="collapsible-trigger">Junior Engineer</h3>
+                    <p><em>Linkzartec</em></p>
+                    <p class="date">Aug 2014 - Jan 2015</p>
+                    <div class="collapsible-content">
+                        <ul>
+                            <li>Testing implementation and evaluation of the electronics systems at "Calderon Teaching Hospital" i.e. audio, illumination, access, CCTV, fire control, queuing systems and intercoms.</li>
+                            <li>Electronic systems design for Telefonica Ecuador CAVs (customer service and sales centers).</li>
+                            <li>Setting and maintenance of DVRs (digital video recorders) and MDVRs (mobile digital video recorders).</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="experience-item collapsible">
+                    <h3 class="collapsible-trigger">Instructor/Exhibitor</h3>
+                    <p><em>Alamos High School</em></p>
+                    <p class="date">Mar 2014 - Apr 2014</p>
+                    <div class="collapsible-content">
+                        <ul>
+                            <li>Conducted workshops in Python programming, HTML and CSS.</li>
+                            <li>Development of a vehicle controlled by Wi-Fi and live streaming using Raspberry Pi.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="teaching" class="reveal">
+        <div class="container">
+            <h2><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 3L1 9l11 6 9-4.91V17h2V9L12 3zm0 8.5L6.5 8 12 5.5 17.5 8 12 11.5zM20 19v-2h-2v2h-2v2h2v2h2v-2h2v-2z" fill="#333"/></svg> Teaching and Laboratory</h2>
+            <div class="experience-grid">
+                <div class="experience-item collapsible">
+                    <h3 class="collapsible-trigger">Lecturer</h3>
+                    <p><em>Information and Computer Science Department DICC, Escuela Politécnica Nacional EPN</em></p>
+                    <p class="date">2025 - current</p>
+                    <div class="collapsible-content">
+                        <p>Modules delivered:</p>
+                        <ul>
+                            <li>Programming I with C++ - BEng. in Computer Science.</li>
+                            <li>Programming II with Java - BEng. in Data Science and Machine Learning.</li>
+                            <li>Computer Architecture - BEng. in Computer Science.</li>
+                            <li>Computer Architecture - BEng. in Software.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="experience-item collapsible">
+                    <h3 class="collapsible-trigger">Lecturer</h3>
+                    <p><em>Computer Science School, Universidad Internacional del Ecuador UIDE</em></p>
+                    <p class="date">2023 - 2025</p>
+                    <div class="collapsible-content">
+                        <p>Modules delivered:</p>
+                        <ul>
+                            <li>Data Storage and Attachment - Master's Degree in Information Systems and Business Intelligence.</li>
+                            <li>Data Analysis, Modelling and Management in Data Science - Master's Degree in Data Science and Machine Learning.</li>
+                            <li>Machine Learning - Master's Degree in Information Systems and Business Intelligence.</li>
+                            <li>Image and Signal Processing - Master's Degree in Applied Artificial Intelligence (Lecturer Assistant).</li>
+                            <li>Technology and Society - BS. in Information Technology.</li>
+                            <li>Programming Logic - BS. in Information Technology.</li>
+                            <li>Introduction to Internet Networking - BS. in Information Technology.</li>
+                            <li>Info Model, Store & Retrieval - BS. in Information Technology.</li>
+                            <li>Introduction to Java Technologies - BS. in Information Technology.</li>
+                            <li>Applied Programming Language for Information Technology - BS. in Information Technology.</li>
+                            <li>Web Programming for Human-Computer Interaction - BS. in Information Technology.</li>
+                        </ul>
+                        <p>Generated content for:</p>
+                        <ul>
+                            <li>Data Analysis, Modelling, and Management in Data Science - Master's Degree in Data Science and Machine Learning.</li>
+                            <li>Web Programming for Human-Computer Interaction - BS in Information Technology.</li>
+                            <li>Intermediate Database Management Systems - BS in Information Technology.</li>
+                        </ul>
+                        <p>Tutor for graduation projects (10) for the Master's Degree in Cybersecurity.</p>
+                    </div>
+                </div>
+                <div class="experience-item collapsible">
+                    <h3 class="collapsible-trigger">Invited Lecturer</h3>
+                    <p><em>Universidad Iberoamericana del Ecuador - UNIBE</em></p>
+                    <p class="date">2024</p>
+                    <div class="collapsible-content">
+                        <p>Module delivered: Data Analysis and Interpretation Master's Degree in Big Data and Data Science.</p>
+                    </div>
+                </div>
+                <div class="experience-item collapsible">
+                    <h3 class="collapsible-trigger">Teaching Assistant</h3>
+                    <p><em>Department of Electrics and Electronics, Universidad de las Fuerzas Armadas - ESPE</em></p>
+                    <p class="date">2013 - 2014</p>
+                    <div class="collapsible-content">
+                        <ul>
+                            <li>Supervised and reviewed a course named "Data Communication" throughout the provision of feedback and the execution of mentoring sessions to undergraduate students.</li>
+                            <li>Reviewed and marked exams based on results and performance.</li>
+                            <li>Taught a module about error detection and correction over communication channels.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="experience-item collapsible">
+                    <h3 class="collapsible-trigger">Laboratory Assistant</h3>
+                    <p><em>Department of Electrics and Electronics, Digital Television Laboratory, Universidad de las Fuerzas Armadas - ESPE</em></p>
+                    <p class="date">2013</p>
+                    <div class="collapsible-content">
+                        <ul>
+                            <li>Prepared test beds for CONATEL to validate TVs' performance under the ISDB-Tb standard for DTT (Digital Terrestrial Television).</li>
+                            <li>Used the tools from the Digital Television Laboratory to satisfy and comply the tests proposed by MINTEL for the corresponding approval and television certification.</li>
+                            <li>Used software (VillageFlow, StreamXpress y StreamXpert) and hardware (transmission and reception antennas, radio frequency amplifiers, televisions, decoders, etc.) relevant to perform certification of receiving equipment</li>
+                            <li>Developed and tested interactive Ginga applications for DTT using Eclipse Galileo y Ginga Windows.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="research" class="reveal">
+        <div class="container">
+            <h2><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z" fill="#333"/></svg> Research Experience</h2>
+            <div class="experience-grid">
+                <div class="experience-item collapsible">
+                    <h3 class="collapsible-trigger">Co-Investigator</h3>
+                    <p><em>Biomedical Data Science Laboratory (BDS_Lab), Universidad Internacional del Ecuador UIDE</em></p>
+                    <p class="date">2024 - current</p>
+                    <div class="collapsible-content">
+                        <ul>
+                            <li>Metabolic Pathways of Alternative Lengthening of Telomeres in Pan-Carcinoma.</li>
+                            <li>Exploration of Andinan and Galapagos pytho-metabolites as potential inhibitors for colorectal adenocarcinoma and breast cancer: a docking and molecular dynamics analysis.</li>
+                            <li>Mindfulness-based intervention model with real-time respiratory flow monitoring for enhancing cognitive function and well-being.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="experience-item collapsible">
+                    <h3 class="collapsible-trigger">Master's Research</h3>
+                    <p><em>Department of Engineering and Technology, Universidad Internacional de La Rioja UNIR</em></p>
+                    <p class="date">2019 - 2020</p>
+                    <div class="collapsible-content">
+                        <ul>
+                            <li>Conducted a comparison of deep learning models used for melanoma skin cancer detection, selected the best option to attempt the reduction of the related mortality rate through early detection, and proposed a model for a Computer Aided Diagnosis (CAD) System.</li>
+                            <li>Conducted critical discussions according to the results of the models' performance based on specific metrics and the trend of using convolutional neural networks (CNN), data augmentation and transfer learning.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="experience-item collapsible">
+                    <h3 class="collapsible-trigger">Research Assistant</h3>
+                    <p><em>WiCOM Energy Research Group, Universidad de las Fuerzas Armadas - ESPE</em></p>
+                    <p class="date">2013 - 2017</p>
+                    <div class="collapsible-content">
+                        <ul>
+                            <li>Evaluated the performance for digital television transmitter stations using ISDB-T standard over AWGN and fading channel.</li>
+                            <li>Modeled a complete DTT (ISDB-T) system following a mathematical approach for each process and developed a simulation environment to support and compare theoretical and simulated results.</li>
+                            <li>Proposed a Cloud-Tx model to enhance the performance in limited conditions (e.g., Low SNR scenarios), with excellent results regarding BER and signal quality over all the three definition modes in the ISDB-T standard.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="experience-item collapsible">
+                    <h3 class="collapsible-trigger">Research Assistant</h3>
+                    <p><em>Department of Electrics and Electronics, Universidad de las Fuerzas Armadas - ESPE</em></p>
+                    <p class="date">2013 - 2017</p>
+                    <div class="collapsible-content">
+                        <ul>
+                            <li>Designed and developed a tool oriented to enhance fine motor skills in people with Down Syndrome.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="experience-item collapsible">
+                    <h3 class="collapsible-trigger">Research Assistant</h3>
+                    <p><em>Computer Networks Research Group, Universidad de las Fuerzas Armadas - ESPE</em></p>
+                    <p class="date">2013 - 2017</p>
+                    <div class="collapsible-content">
+                        <ul>
+                            <li>Co-created the novel research group with the cooperation and mentoring of an international researcher from Brazil.</li>
+                            <li>Conducted literature review and analysed neighbors selection algorithms regarding on-demand video services for BitTorrent-based systems.</li>
+                            <li>Assisted and proposed mechanisms for distribution of multimedia content over computer networks.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="reveal">
+        <div class="container">
+            <h2><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M22.7 19l-9.1-9.1c.9-2.3.4-5-1.5-6.9-2-2-5-2.4-7.4-1.3L9 6l-4 4L.7 5.7c1.1-2.4.8-5.5-1.3-7.4-1.9-1.9-4.6-2.4-6.9-1.5l9.1 9.1L1 22.7 22.7 1z" fill="#333"/></svg> Projects</h2>
+            <div class="projects-grid">
+                <div class="project-item">
+                    <a href="https://github.com/MrOnie/License-Plate-Detection-And-Recognition" target="_blank">
+                        <img src="images/LPDR.png" alt="LPDR">
+                        <h3>License Plate Detection and Recognition</h3>
+                    </a>
+                    <p>Developed a system for license plate detection and recognition using WPOD-NET and MobileNetV2.</p>
+                </div>
+                <div class="project-item">
+                    <a href="https://github.com/MrOnie/Pectoral-Removal-And-Segmentation" target="_blank">
+                        <img src="images/BC.png" alt="BC">
+                        <h3>Breast Cancer Diagnosis Aid</h3>
+                    </a>
+                    <p>Created a system for the removal of the pectoral muscle and segmentation for an aided breast cancer diagnosis system using image processing.</p>
+                </div>
+                <div class="project-item">
+                    <a href="https://github.com/MrOnie/Valvulopathies-From-ECG" target="_blank">
+                        <img src="images/Valv.png" alt="Valv">
+                        <h3>Valvulopathies Detection</h3>
+                    </a>
+                    <p>Built a valvulopathies detection system from ECG using 1-D CNNs.</p>
+                </div>
+                <div class="project-item">
+                    <a href="#" target="_blank">
+                        <img src="images/PML.jpg" alt="PML">
+                        <h3>Predictive Modeling for Logistics</h3>
+                    </a>
+                    <p>Designed and implemented predictive models and machine learning algorithms for private logistics.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="reveal">
+        <div class="container">
+            <h2><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.94-.49-7-3.85-7-7.93s3.06-7.44 7-7.93v15.86zm2-15.86c1.03.13 2 .45 2.87.93H13v-.93zM13 7h2.87c.48.87.78 1.88.9 2.99H13V7zm0 4h3.77c-.12 1.11-.42 2.12-.9 2.99H13v-2.99zm1 4.07V17h2.87c-.48-.87-.78-1.88-.9-2.99H14.07z" fill="#333"/></svg> Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-item">Artificial Intelligence</div>
+                <div class="skill-item">Machine Learning</div>
+                <div class="skill-item">Data Science</div>
+                <div class="skill-item">Web Development</div>
+                <div class="skill-item">Python</div>
+                <div class="skill-item">C++</div>
+                <div class="skill-item">Java</div>
+                <div class="skill-item">JavaScript</div>
+                <div class="skill-item">HTML</div>
+                <div class="skill-item">CSS</div>
+                <div class="skill-item">React</div>
+                <div class="skill-item">Node.js</div>
+                <div class="skill-item">SQL</div>
+                <div class="skill-item">Git</div>
+                <div class="skill-item">MATLAB</div>
+                <div class="skill-item">Deep Learning</div>
+                <div class="skill-item">Generative Adversarial Networks</div>
+            </div>
+        </div>
+    </section>
+
+    <section id="education" class="reveal">
+        <div class="container">
+            <h2><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 3L1 9l11 6 9-4.91V17h2V9L12 3zm0 8.5L6.5 8 12 5.5 17.5 8 12 11.5z" fill="#333"/></svg> Education</h2>
+            <div class="education-item">
+                <h3>MS in Artificial Intelligence</h3>
+                <p><em>Universidad Internacional de La Rioja UNIR, La Rioja, Spain</em> - 2020</p>
+            </div>
+            <div class="education-item">
+                <h3>BSc in Electronics and Telecommunications</h3>
+                <p><em>Universidad de las Fuerzas Armadas - ESPE, Quito, Ecuador</em> - 2017</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="publications" class="reveal">
+        <div class="container">
+            <h2><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z" fill="#333"/></svg> Publications</h2>
+            <div class="publication-grid">
+                <div class="publication-item">
+                    <p><b>Martínez Gordon, R. S.</b>, López Mendoza, X. P., Freire Díaz, J. P., & Cózar Cisneros, A. E. (2025). Enseñanza Inteligente de la Matemática: Aplicaciones del Machine Learning y la IA en la Educación Superior. Páginas Brillantes Ecuador. Quito, Ecuador.</p>
+                    <a href="https://doi.org/10.70894/PBE-978-9942-575-29-6" target="_blank" class="btn-link">Read More</a>
+                </div>
+                <div class="publication-item">
+                    <p>Mardones, A. M., Vega, R. G. A., Trujillo, F. K., <b>Martínez, R.</b>, Acarapi, J. M., & Bastidas, J. O. G. (2025). Gamification and digital environments in higher education: Enhancing motivation and experiential learning. In Seminars in Medical Writing and Education (Vol. 4, p. 5). AG Editor (Argentina).</p>
+                    <a href="https://doi.org/10.56294/mw2025423" target="_blank" class="btn-link">Read More</a>
+                </div>
+                <div class="publication-item">
+                    <p><b>Martínez Gordon, R. S.</b>, Becerra Zurita, M. A., Guallichico Guallichico, L. A., & Paguay Salguero, J. F. (2025). Matemáticas aplicadas a proyectos del mundo real: Resolución de problemas con TIC y pensamiento crítico. Páginas Brillantes Ecuador. Quito, Ecuador.</p>
+                    <a href="https://doi.org/10.70894/PBE-978-9942-575-20-3" target="_blank" class="btn-link">Read More</a>
+                </div>
+                 <div class="publication-item">
+                    <p>Manzano, J. E. E., <b>Martínez, R.</b>, Armijos, F. A. P., García, M. M. G. (2025). Evaluación del uso del enfoque STEAM en el rendimiento académico en secundaria. Sinergia Académica, 8(5), 845-856.</p>
+                    <a href="https://sinergiaacademica.com/index.php/sa/article/view/689" target="_blank" class="btn-link">Read More</a>
+                </div>
+                <div class="publication-item">
+                    <p>Naranjo, B. M. M., García, M. M. G., Manzano, J. E. E., <b>Martínez, R.</b> (2025). Uso de simuladores virtuales en la enseñanza de conceptos abstractos. Sinergia Académica, 8(4), 713-727.</p>
+                    <a href="https://sinergiaacademica.com/index.php/sa/article/view/636" target="_blank" class="btn-link">Read More</a>
+                </div>
+                <div class="publication-item">
+                    <p>Arango, M. D. L. V., <b>Martínez, R.</b>, Castillo, E. A. R., Mendoza, R. R. P. (2025). Desarrollo de la comunicación efectiva, el trabajo colaborativo y la capacidad para la resolución de problemas, a través del Aprendizaje Basado en Proyectos.</p>
+                    <a href="https://doi.org/10.59282/reincisol.V4(7)3846-3869" target="_blank" class="btn-link">Read More</a>
+                </div>
+                <div class="publication-item">
+                    <p>Reyes, A. T. C., Pallasco, L. R. A., Alexandra, P. G. Y., Quishpe, E. R. A., <b>Martínez, R.</b> (2025). Integración de metodologías de aprendizaje basado en la investigación para fomentar competencias científicas en estudiantes universitarios.</p>
+                    <a href="https://doi.org/10.47606/ACVEN/PH0338" target="_blank" class="btn-link">Read More</a>
+                </div>
+                <div class="publication-item">
+                    <p>Armendáriz-Castillo, I., García-Cárdenas, J., Espinosa, P., Hidalgo-Fernández, K., Peña-Zúñiga, L., <b>Martínez, R.</b>, et al. (2025). Metabolic pathways of Alternative Lengthening of Telomeres in pan-carcinoma. PloS one, 20(2), e0314012.</p>
+                    <a href="https://doi.org/10.1371/journal.pone.0314012" target="_blank" class="btn-link">Read More</a>
+                </div>
+                <div class="publication-item">
+                    <p><b>Martínez, R.</b>, Olmedo, G., & Paredes, N. (2017, August). Analytical performance of digital terrestrial television transmitter stations for mobile broadcasting using ISDB-T standard over AWGN and fading channel. In 2017 IEEE Colombian Conference on Communications and Computing (COLCOM).</p>
+                    <a href="https://doi.org/10.1109/ColComCon.2017.8088190" target="_blank" class="btn-link">Read More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="courses" class="reveal">
+        <div class="container">
+            <h2><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" fill="#333"/></svg> Courses & Certifications</h2>
+            <div class="courses-list">
+                <div class="course-item collapsible">
+                    <h3 class="collapsible-trigger"><a href="https://certificados.udla.edu.ec/Certificate/Verify/126B14682EF1" target="_blank" class="btn-link">📜</a> Diploma in SDGs and Sustainable Education (2025)</h3>
+                    <div class="collapsible-content">
+                        <ul>
+                            <li>Con gafas violeta igualdad de género en la escuela</li>
+                            <li>Introducción a la sustentabilidad hacia un futuro posible</li>
+                            <li>ODS y sostenibilidad una mirada desde los colegios</li>
+                            <li>Introducción a la Responsabilidad Social Universitaria</li>
+                            <li>Objetivos de desarrollo sostenible para América Latina y el Caribe</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="course-item collapsible">
+                    <h3 class="collapsible-trigger"><a href="https://certificados.udla.edu.ec/Certificate/Verify/126B0E081F73" target="_blank" class="btn-link">📜</a> Diploma in Design and Educative Gamification (2025)</h3>
+                    <div class="collapsible-content">
+                        <ul>
+                            <li>Coursera 1</li>
+                            <li>Coursera 2</li>
+                            <li>Coursera 3</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="course-item collapsible">
+                    <h3 class="collapsible-trigger"><a href="https://www.coursera.org/professional-certificates/microsoft-ai-and-ml-engineering" target="_blank" class="btn-link">📜</a> Microsoft AI & ML Engineering Professional Certificate (In progress)</h3>
+                    <div class="collapsible-content">
+                        <ul>
+                            <li>Foundations of AI and Machine Learning</li>
+                            <li>AI and Machine Learning Algorithms and Techniques</li>
+                            <li>Building Intelligent Troubleshooting Agents</li>
+                            <li>Microsoft Azure for AI and Machine Learning</li>
+                            <li>Advanced AI and Machine Learning Techniques and Capstone</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="course-item collapsible">
+                    <h3 class="collapsible-trigger"><a href="https://www.coursera.org/professional-certificates/meta-front-end-developer" target="_blank" class="btn-link">📜</a> Meta Front-End Developer Professional Certificate (In progress)</h3>
+                    <div class="collapsible-content">
+                        <ul>
+                            <li>Introduction to Front-End Development</li>
+                            <li>Programming with JavaScript</li>
+                            <li>Version Control</li>
+                            <li>HTML and CSS in depth</li>
+                            <li>React Basics</li>
+                            <li>Advanced React</li>
+                            <li>Principles of UX/UI Design</li>
+                            <li>Front-End Developer Capstone</li>
+                            <li>Coding Interview Preparation</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="course-item collapsible">
+                    <h3 class="collapsible-trigger"><a href="https://www.coursera.org/professional-certificates/amazon-junior-software-developer" target="_blank" class="btn-link">📜</a> Amazon Junior Software Developer Professional Certificate (In progress)</h3>
+                    <div class="collapsible-content">
+                        <ul>
+                            <li>Introduction to Software Development</li>
+                            <li>Programming with Java</li>
+                            <li>Data Structures and Algorithms</li>
+                            <li>Database Management with Java and SQL</li>
+                            <li>Full Stack Web Development</li>
+                            <li>Generative AI in Software Development</li>
+                            <li>Application Development</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="course-item collapsible">
+                    <h3 class="collapsible-trigger"><a href="https://certificados.udla.edu.ec/Certificate/Verify/126AF65D2346" target="_blank" class="btn-link">📜</a> Diploma in Inclusive Education and Disability (2025)</h3>
+                    <div class="collapsible-content">
+                        <ul>
+                            <li>Diversity and Inclusion in Education.</li>
+                            <li>Understanding disability in university settings.</li>
+                            <li>Disability Inclusion in Education: Building Systems of Support.</li>
+                            <li>Social inclusion of people with disabilities from a rights-based perspective..</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="course-item collapsible">
+                    <h3 class="collapsible-trigger"><a href="https://certificados.udla.edu.ec/Certificate/Verify/1268C131762A" target="_blank" class="btn-link">📜</a> Diploma in Artificial Intelligence Applied for Teaching (2024)</h3>
+                    <div class="collapsible-content">
+                        <ul>
+                            <li>Artificial Intelligence (AI): Interactions and Prompts.</li>
+                            <li>AI for Educators: Transform Your Teaching with ChatGPT.</li>
+                            <li>ChatGPT - Uses and Strategies.</li>
+                            <li>Generative AI in the Classroom.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="course-item collapsible">
+                    <h3 class="collapsible-trigger"><a href="https://certificados.udla.edu.ec/Certificate/Verify/1268A91D9057" target="_blank" class="btn-link">📜</a> Diploma in 21st Century Practical Teaching Skills (2024)</h3>
+                    <div class="collapsible-content">
+                        <ul>
+                            <li>Practice-based teacher training to develop 21st century skills.</li>
+                            <li>What future for education?</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="course-item collapsible">
+                    <h3 class="collapsible-trigger"><a href="https://coursera.org/share/b5565e35cf46c0d24e498c2af2bd75f8" target="_blank" class="btn-link">📜</a> Introduction to NoSQL Databases (2024)</h3>
+                </div>
+                <div class="course-item collapsible">
+                    <h3 class="collapsible-trigger"><a href="https://coursera.org/share/9b198f0c3b5dd49a64506f4f000880e3" target="_blank" class="btn-link">📜</a> Introduction to MongoDB (2024)</h3>
+                </div>
+                <div class="course-item collapsible">
+                    <h3 class="collapsible-trigger"><a href="#" target="_blank" class="btn-link">📜</a> Inclusive educational attention strategies (2024)</h3>
+                </div>
+                <div class="course-item collapsible">
+                    <h3 class="collapsible-trigger"><a href="#" target="_blank" class="btn-link">📜</a> Online Teaching Starter Pack (2024)</h3>
+                </div>
+                <div class="course-item collapsible">
+                    <h3 class="collapsible-trigger"><a href="https://coursera.org/share/5eacb8ae7b5782740b06a5ff01637a36" target="_blank" class="btn-link">📜</a> Practical Data Science with MATLAB Specialization (2021)</h3>
+                    <div class="collapsible-content">
+                        <ul>
+                            <li>Exploratory Data Analysis with MATLAB</li>
+                            <li>Data Processing and Feature Engineering with MATLAB</li>
+                            <li>Predictive Modeling and Machine Learning with MATLAB</li>
+                            <li>Data Science Project: MATLAB for the Real World</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="course-item collapsible">
+                    <h3 class="collapsible-trigger"><a href="https://coursera.org/share/87992fec7154d67f939a4277ace2333c" target="_blank" class="btn-link">📜</a> Generative Adversarial Networks - GANs Specialization (2020)</h3>
+                    <div class="collapsible-content">
+                        <ul>
+                            <li>Build basic and better Generative Adversarial Networks (GANs)</li>
+                            <li>Apply Generative Adversarial Networks (GANs)</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="course-item collapsible">
+                    <h3 class="collapsible-trigger"><a href="https://coursera.org/share/060204843f9d2efb7b9efc08c84f85e0" target="_blank" class="btn-link">📜</a> MATLAB Programming for Engineers and Scientists Specialization (2020)</h3>
+                    <div class="collapsible-content">
+                        <ul>
+                            <li>Introduction to Programming with MATLAB</li>
+                            <li>Mastering Programming with MATLAB</li>
+                            <li>Introduction to Data, Signal, and Image Analysis with MATLAB</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="course-item collapsible">
+                    <h3 class="collapsible-trigger"><a href="https://coursera.org/share/36a28bffaa35fe98847799dad9d79a24" target="_blank" class="btn-link">📜</a> Deep Learning Specialization. Master Deep Learning, and Break into AI (2020)</h3>
+                    <div class="collapsible-content">
+                        <ul>
+                            <li>Neural Networks and Deep Learning</li>
+                            <li>Improving Deep Neural Networks</li>
+                            <li>Structuring Machine Learning Projects</li>
+                            <li>Convolutional Neural Networks</li>
+                            <li>Sequence Models</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Ronie Martínez. All Rights Reserved.</p>
+        </div>
+    </nav>
+
+    <div id="main-content">
+
+    <section id="about">
+        <div class="container reveal">
+            <h2><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z" fill="#333"/></svg> About Me</h2>
+            <p>I am a dedicated and versatile professional with a robust background in Artificial Intelligence, Machine Learning, and Data Science, complemented by a solid foundation in software development. My academic journey, crowned with a Master's degree in Artificial Intelligence and a Bachelor's in Electronics and Telecommunications, has provided me with a deep understanding of both theoretical frameworks and their practical applications. I thrive on tackling complex challenges and have a proven track record of developing innovative solutions, ranging from sophisticated deep learning models for medical diagnostics to dynamic and interactive web applications.</p>
+            <p>My professional experience is diverse, spanning freelance consulting, research advising, and engineering roles. I have a passion for education and have been actively involved in teaching and mentoring, sharing my knowledge in areas like programming, data science, and AI. As a lifelong learner, I am constantly exploring new technologies and methodologies to stay at the cutting edge of the industry. I am proficient in a variety of programming languages and tools, including Python, JavaScript, Java, C++, MATLAB, and the full web stack. My goal is to leverage my skills and experience to contribute to meaningful projects that push the boundaries of technology and create a positive impact.</p>
+            <button id="download-cv-btn" class="btn">Download CV</button>
         </div>
     </section>
 
@@ -373,7 +877,7 @@
                     <a href="https://doi.org/10.1371/journal.pone.0314012" target="_blank" class="btn-link">Read More</a>
                 </div>
                 <div class="publication-item">
-                    <p><b>Martínez, R.</b>, Olmedo, G., & Paredes, N. (2017, August). Analytical performance of digital terrestrial television transmitter stations for mobile broadcasting using ISDB-T standard over AWGN and fading channel. In 2017 IEEE Colombian Conference on Communications and Computing (COLCOM).</p>
+                    <p><b>Martínez, R.</b>, Olmedo, G., & Paredes, N. (2017, August). Analytical performance of digital television transmitter stations for mobile broadcasting using ISDB-T standard over AWGN and fading channel. In 2017 IEEE Colombian Conference on Communications and Computing (COLCOM).</p>
                     <a href="https://doi.org/10.1109/ColComCon.2017.8088190" target="_blank" class="btn-link">Read More</a>
                 </div>
             </div>
@@ -536,7 +1040,7 @@
             </div>
         </div>
     </section>
-
+    </div>
     <footer>
         <div class="container">
             <p>&copy; 2025 Ronie Martínez. All Rights Reserved.</p>
