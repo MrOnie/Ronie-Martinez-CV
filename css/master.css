@@ -236,6 +236,15 @@ section h2 svg {
     padding: 0.5rem 1.5rem;
     border-radius: 20px;
     font-size: 1.1rem;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.skill-item:hover {
+    background: #1a253f;
+    color: #fff;
+    transform: scale(1.1);
+    box-shadow: 0 0 20px #6c8ee0;
 }
 
 /* Education Section */
